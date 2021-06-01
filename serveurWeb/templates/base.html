@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+    <!--<meta http-equiv="Refresh" content="5">-->
+
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <header>
+        
+          <ul class="navbar-nav">
+            <li><a class="logo" href="{{ url_for('index')}}">Capteur De CO2</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
+          </ul>
+        
+    </header>
+    
+    {% block content %} {% endblock %}
+
+    {% block Java %} {% endblock %}
+  </body>
+</html>
+

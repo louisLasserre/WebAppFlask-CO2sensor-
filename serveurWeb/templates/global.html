@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+<!-- partie affichage de base : non dynamique -->
+
+{% block content %}
+
+<div class="test">
+    <header class="base"><div class="titre">salle</div><div class="titre">seuil</div><div class="titre">date</div></header>
+<!--Pour chaque ligne dans la base on creer une <div>-->
+    {% for post in globale %}
+    
+        <div class="tuple">
+            <a href="#">
+                <h2>{{ post['salle'] }}     </h2>
+            </a>
+            <hr>
+            <h3>    {{ post['seuil'] }}</h3> 
+            <hr>
+            <h3> {{post['temps']}} </h3>
+        </div>
+    {% endfor %}
+    
+</div>
+{% endblock %}
+
+{% block Java %}
+<!-- div contenant tous les bloc produit par le java
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+console.log("lancement")
+//I sert à l'id des div produites plus bas de sorte à ce qu'elle soit unique
+var I = 0
+    setInterval(             //boucle                  
+    function()
+    {
+        $.getJSON(                     //obtenir le fichier Json
+            '/ajax',                    //à cette adresse
+            function(data) {  
+                $(".test").empty();
+                
+                $.each($.parseJSON(data.capteurUn), function(index, value) {   //boucle pour chaque élément dans la liste(ligne dans la base/csv)
+                    console.log(index + ": " + value);
+                    //$('.ligne').append("<div class=''></div>");
+                    $("<div>", {                                                    //création d'une div avec id unique pour une ligne du csv
+                        'id': (index + I),
+                        'class': 'tuple'
+                    }).prependTo('.test');                                          //mettre cette div dans .test
+
+                    for(var i in value){
+                        var date = value[1]
+                        var seuil = value[2]
+                        var salle = value[3]
+                    }
+                    $("#" + (index +I)).append("<a href='#'>" + salle + "</a><hr><h3> " + seuil + "</h3><hr><h3>" + date +"</h3"); 
+
+
+                    //$("#" + (index +I)).text(value);                                //affichage de la valeur dans la div correspondante
+                });
+                $(".test").prepend("<header class='base'><div class='titre'>salle</div><div class='titre'>seuil</div><div class='titre'>date</div></header>")
+                //I = I + ($.parseJSON(data.capteurUn).length);
+                //console.log((data.capteurUn).get(0));
+                //$.each($.parseJSON(data.capteurUn), function(idx, obj){
+                //    alert(obj.salle);
+                //});
+              
+                                                    // #result element
+            });
+    },
+    15000);
+</script>
+--> 
+{% endblock %}                                  
+    
+    
+
+
+
+
+
+  
+  

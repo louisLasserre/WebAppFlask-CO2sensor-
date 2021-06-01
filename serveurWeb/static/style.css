@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+
+}
+/*scrollbar*/
+.inside::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+.inside::-webkit-scrollbar-corner{
+    background: #dddddd;
+    box-shadow: inset 0 0 5px gray;
+}
+.inside::-webkit-scrollbar-track {
+    background: #dddddd;
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 6px;
+  }
+.inside::-webkit-scrollbar-thumb{
+    background: #478fe0;
+    border-radius: 6px;
+}
+.inside::-webkit-scrollbar-thumb:hover{
+    background: #186ccc;
+}
+
+.Mycontainer2 {
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+
+}
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: #186ccc;
+}
+.titre {
+    color: #186ccc;
+    float: left;
+    background-color: #eeeeee;
+    width: 12vw;
+    text-align: center;
+    height: 15px;
+    margin-top: 1.7vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 6px 
+
+}
+
+.tuple {
+    color: #186ccc;
+    padding: 5px;
+    border: 3px solid #186ccc;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: #eeeeee;
+    height: 50px;
+
+}
+.test {
+    
+    position: relative;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    width: 44vw;
+    box-shadow: 0px 0px 18px black;
+    border-radius: 8px;
+    
+    
+}
+.base{
+    position: relative;/*left: -5vw;*/
+    
+    width: 42vw;
+    height: 5.6vh;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    background-color: #186ccc;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+    
+
+    text-align: center;
+    color: #eeeeee;
+
+}
+.inside{
+    overflow: auto;
+    scrollbar-color: #478fe0 #dddddd;
+    scrollbar-width: 9px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 40vw;
+    background-color: #333333;
+    padding-left: 2vw;
+    padding-right: 2vw;
+ 
+    
+
+    
+    
+    position: relative;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    
+    height: 50vh;
+}
+
+@media only screen and (max-width: 900px) {
+    .inside{width: 75vw;}
+    .base{ width: 77vw;}
+    .test{ width: 75vw;}
+    .titre{ width: 23vw;}
+
+
+}
+
+.form{
+    margin-top: 25px;
+    border: 3px solid #333333;
+    width: 75vw;
+    height: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
